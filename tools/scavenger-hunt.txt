@@ -1,0 +1,25 @@
+1. We can get the IP Address using ifconfig. This gives the network information of all devices on the computer.
+So if we want the IP address of our computer, we can look at the en0 interface, which
+has an IP address of 137.22.165.63. If you want ethernet, look at the interfaces that begin with
+eth.
+
+2. You can find the IP address of a given host name by typing host <hostname>. This will give you the IP address of the hostname.
+
+3. You can get the host name from the IP address using the command nslookup <ip address>.
+
+4. To do this I would use scp. I would type in scp <source file path> sanghia@mantis.mathcs.carleton.edu:<destination file path>. 
+This would prompt me for my password, and upon entering it my files would get copied over.
+
+5. We can tell if a process is running on a given port on a given host by running nc -z -v <ip address> <port>. Doing so will tell you
+if connection to that given port of that given host succeeded.
+
+6. To scan for all open ports on a host, use nc -z <ip address> <port range>. The port range is the range of ports you would like to be 
+checked, since there is no definite number of ports available.
+
+7. To download and save a webpage, use wget <url> to downlaod and save the webpage at the url. This will save the HTML file of the website to your 
+local file system. If you try to wget an https website though, you'll get a 
+
+8. To view headers of HTTP responses, use curl -T <url> and this will give you all headers.
+
+9. To get the headers your computer sends, run curl --head <url>.
+
