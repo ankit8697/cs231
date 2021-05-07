@@ -1,0 +1,24 @@
+﻿Decryption Summary
+Eric Neidhart, Ankit Sanghi, Ginnie White
+
+
+Note: Due to lack of processing power and time, we didn’t attempt to run the double passwords.
+
+
+Part One:
+Passwords cracked: 1162
+Total time: 0.567s
+Total hashes computed: 267751
+Passwords per Hash: 0.004339853072444174
+Time per password cracked: 0.0004878518072
+
+
+Part Two:
+Passwords cracked: 1133
+Total time: 10:08:53
+Total hashes computed: 466192417
+Passwords per Hash: 0.000002430326961
+Time per password cracked: 0.5364342454
+
+
+The time per password increased by a factor of ~1000 (about 1098), due to the fact that we had to calculate the hashes for each iteration of the salted passwords, whereas for the unsalted passwords, we could pregenerate all of the hashes of single word passwords. One way we could have possibly sped up the process was by generating all of the hashes with a given salt (due to the fact that the process used here only salted once), and solved for all of the passwords with that salt at the same time, but given the limited number of passwords, there wasn’t likely to be much overlap.
